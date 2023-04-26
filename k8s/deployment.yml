@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: config-service
-  lablels:
+  labels:
     app: config-service
 spec:
   replicas: 1
