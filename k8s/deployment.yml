@@ -13,17 +13,17 @@ spec:
     metadata:
       labels:
         app: config-service
-      spec:
-        containers:
-          - name: config-service
-            image: config-service
-            imagePullPolicy: IfNotPresent
-            lifecycle:
-              preStop:
-                exec:
-                  command: [ "sh", "-c", "sleep 5" ]
-            ports:
-              - containerPort: 8888
-            env:
-              - name: BPL_JVM_THREAD_COUNT
-                value: "50"
+    spec:
+      containers:
+        - name: config-service
+          image: config-service
+          imagePullPolicy: IfNotPresent
+          lifecycle:
+            preStop:
+              exec:
+                command: [ "sh", "-c", "sleep 5" ]
+          ports:
+            - containerPort: 8888
+          env:
+            - name: BPL_JVM_THREAD_COUNT
+              value: "50"
